@@ -8,8 +8,9 @@ const teamMembers = [
     num: '학번: 202204025',
     dept: '전공: ICT융합공학부',
     email: '이메일: soeun2388@naver.com',
-    imgSrc:'/Img/Kim.png', 
+    imgSrc:'/Img/Kim.png', // 이미지 경로 수정
     link: 'https://github.com/SoEunKim03',
+    alt: '김소은 프로필 이미지', // 대체 텍스트 추가
   },
   {
     name: '박예원',
@@ -18,6 +19,7 @@ const teamMembers = [
     email: '이메일: parkyw0424@naver.com',
     imgSrc: '/Img/Park.png', 
     link: 'https://github.com/pyw424',
+    alt: '박예원 프로필 이미지', // 대체 텍스트 추가
   },
   {
     name: '배채은',
@@ -26,11 +28,12 @@ const teamMembers = [
     email: '이메일: 01lily0302@naver.com',
     imgSrc: '/Img/Bae.png', 
     link: 'https://github.com/Paicearea',
+    alt: '배채은 프로필 이미지', // 대체 텍스트 추가
   },
 ];
 
 // 오른쪽 Header
-const rightMenuList = ['팀명소개', '블로그', '팀문화'];
+const rightMenuList = ['팀명소개 ', ' 블로그 ', ' 팀문화'];
 
 // 팀원 정보 표시 컴포넌트
 function TeamMember({ member }) {
@@ -60,7 +63,7 @@ function TeamMember({ member }) {
         <tr>
           <td style={{ height: '0' }}>
             <a style={{ height: '100%' }} href={member.link}>
-              <img alt={member.name} className="Image" src={member.imgSrc} />
+              <img alt={member.alt} className="Image" src={member.imgSrc} />
             </a>
           </td>
         </tr>
